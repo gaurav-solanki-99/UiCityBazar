@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
 
         rlIcon1.setImageDrawable(getResources().getDrawable(R.drawable.facebook));
         rlIcon2.setImageDrawable(getResources().getDrawable(R.drawable.linked3));
-        rlIcon3.setImageDrawable(getResources().getDrawable(R.drawable.pintrest4));
-        rlIcon4.setImageDrawable(getResources().getDrawable(R.drawable.instagramr2));
+        rlIcon3.setImageDrawable(getResources().getDrawable(R.drawable.pinterest));
+        rlIcon4.setImageDrawable(getResources().getDrawable(R.drawable.logoinsta));
         rlIcon5.setImageDrawable(getResources().getDrawable(R.drawable.twitter2));
         rlIcon6.setImageDrawable(getResources().getDrawable(R.drawable.youtube));
 
