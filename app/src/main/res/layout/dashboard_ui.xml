@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+  >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+
+        />
+
+    <TextView
+        android:id="@+id/tvCateogary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:layout_below="@id/rvBanner"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginLeft="15dp"
+
+
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCateogary"
+        android:orientation="vertical"
+
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/category_backgrounf"
+        android:nestedScrollingEnabled="false"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+
+        android:layout_centerHorizontal="true"
+
+        />
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="10dp"
+           android:orientation="vertical"
+           android:background="@drawable/discount_background"
+           android:layout_below="@+id/rvCategory"
+           android:layout_marginTop="15dp"
+           android:id="@+id/discountll"
+
+           >
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Discount"
+               android:textAlignment="center"
+               android:padding="5dp"
+               android:layout_alignParentTop="true"
+               android:background="@color/white"
+               android:textColor="@color/black"
+               android:layout_marginTop="25dp"
+               android:id="@+id/tvLinediscount"
+
+
+               />
+
+                          <ImageView
+                              android:layout_width="100dp"
+                              android:layout_height="100dp"
+                              android:src="@drawable/ribin"
+                              android:rotation="-30"
+                              android:layout_alignParentTop="true"
+                              android:layout_marginLeft="-5dp"
+                              android:layout_marginTop="-10dp"
+                              />
+
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_below="@+id/tvLinediscount"
+               >
+
+               <View
+                   android:layout_width="50dp"
+                   android:layout_height="match_parent"
+                   android:background="@color/white"
+                   />
+
+
+               <androidx.recyclerview.widget.RecyclerView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/tvLinediscount"
+                   android:id="@+id/rvdiscount"
+                   android:layout_marginLeft="15dp"
+                   android:layout_marginTop="15dp"
+                   android:nestedScrollingEnabled="false"
+                   />
+
+
+
+
+           </LinearLayout>
+
+
+
+
+
+<!--               <ImageView-->
+<!--                   android:layout_width="100dp"-->
+<!--                   android:layout_height="100dp"-->
+<!--                   android:src="@drawable/ribin"-->
+<!--                   android:rotation="-30"-->
+<!--                   android:layout_alignParentTop="true"-->
+<!--                   android:layout_marginLeft="-5dp"-->
+<!--                   android:layout_marginTop="-10dp"-->
+
+
+<!--                   />-->
+
+
+
+
+
+
+       </RelativeLayout>
+
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="280dp"
+          android:layout_below="@+id/discountll"
+          android:id="@+id/lltopStores"
+          android:layout_marginTop="15dp"
+          android:background="@drawable/top_store_background"
+          >
+
+      </RelativeLayout>
+</RelativeLayout>
+
+</ScrollView>
+
+
+
+</LinearLayout>
