@@ -17,9 +17,11 @@ import androidx.recyclerview.widget.SnapHelper;
 
 import com.example.uicitybazar.Model.Category;
 import com.example.uicitybazar.Model.DiscountPer;
+import com.example.uicitybazar.Model.TopProduct;
 import com.example.uicitybazar.MyAdapter.Baneradapter;
 import com.example.uicitybazar.MyAdapter.CategoryAdapter;
 import com.example.uicitybazar.MyAdapter.DiscountAdapter;
+import com.example.uicitybazar.MyAdapter.TopProductAdapter;
 import com.example.uicitybazar.databinding.DashboardUiBinding;
 
 import java.util.ArrayList;
@@ -32,8 +34,11 @@ public class DashboardActivity extends AppCompatActivity
     ArrayList<Banner> al;
     ArrayList<Category> cal;
     ArrayList<DiscountPer> disal;
+    ArrayList<TopProduct> tpal;
+    TopProductAdapter  topProductAdapter;
     DiscountAdapter discountAdapter;
     CategoryAdapter categoryAdapter;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState)
     {
@@ -84,6 +89,17 @@ public class DashboardActivity extends AppCompatActivity
         binding.rvdiscount.setLayoutManager(new GridLayoutManager(this,2));
         binding.rvdiscount.setAdapter(discountAdapter);
 
+
+
+        tpal=new ArrayList<>();
+        tpal.add(new TopProduct(1 ,"Red Chief Shoes","https://5.imimg.com/data5/TJ/TM/MY-52269820/red-chief-shoes-500x500.jpg","999","15%Off"));
+        tpal.add(new TopProduct(2 ,"JBL earPhone","https://media.croma.com/image/upload/f_auto,q_auto,d_Croma%20Assets:no-product-image.jpg,h_350,w_350/v1605200806/Croma%20Assets/Entertainment/Headphones%20and%20Earphones/Images/8944893460510.png","24000","15%Off"));
+        tpal.add(new TopProduct(3 ," Apple iPhone 7","https://rukminim1.flixcart.com/image/416/416/j9d3bm80/mobile/8/k/x/apple-iphone-7-mqtx2hn-a-original-imaeyyuygs9rzmty.jpeg?q=70","999","15%Off"));
+        tpal.add(new TopProduct(4 ,"Realme Smart Watch","https://media.croma.com/image/upload/f_auto,q_auto,d_Croma%20Assets:no-product-image.jpg,h_350,w_350/v1605338825/Croma%20Assets/Communication/Wearable%20Devices/Images/8921639583774.png","999","15%Off"));
+
+        topProductAdapter=new TopProductAdapter(DashboardActivity.this,tpal);
+        binding.rvtopStores.setLayoutManager(new GridLayoutManager(this,2));
+        binding.rvtopStores.setAdapter(topProductAdapter);
 
 
 
