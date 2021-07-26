@@ -18,10 +18,12 @@ import androidx.recyclerview.widget.SnapHelper;
 import com.example.uicitybazar.Model.Category;
 import com.example.uicitybazar.Model.DiscountPer;
 import com.example.uicitybazar.Model.TopProduct;
+import com.example.uicitybazar.Model.TopShopes;
 import com.example.uicitybazar.MyAdapter.Baneradapter;
 import com.example.uicitybazar.MyAdapter.CategoryAdapter;
 import com.example.uicitybazar.MyAdapter.DiscountAdapter;
 import com.example.uicitybazar.MyAdapter.TopProductAdapter;
+import com.example.uicitybazar.MyAdapter.TopShopAdapter;
 import com.example.uicitybazar.databinding.DashboardUiBinding;
 
 import java.util.ArrayList;
@@ -35,9 +37,11 @@ public class DashboardActivity extends AppCompatActivity
     ArrayList<Category> cal;
     ArrayList<DiscountPer> disal;
     ArrayList<TopProduct> tpal;
+    ArrayList<TopShopes> tsal;
     TopProductAdapter  topProductAdapter;
     DiscountAdapter discountAdapter;
     CategoryAdapter categoryAdapter;
+    TopShopAdapter topShopAdapter;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState)
@@ -100,6 +104,30 @@ public class DashboardActivity extends AppCompatActivity
         topProductAdapter=new TopProductAdapter(DashboardActivity.this,tpal);
         binding.rvtopStores.setLayoutManager(new GridLayoutManager(this,2));
         binding.rvtopStores.setAdapter(topProductAdapter);
+
+
+
+
+        tsal = new ArrayList<>();
+        tsal.add(new TopShopes(1,"https://citybazaronline.com/uploads/store-banner/2660_1609167849.jpg","Shaheb Fashion","70/2, B.K. Sindhi Colony CHAT wali Gali, Indore M.P.","1236547890",3,4));
+        tsal.add(new TopShopes(2,"https://citybazaronline.com/uploads/store-banner/2660_1609167849.jpg","Shaheb Fashion","70/2, B.K. Sindhi Colony CHAT wali Gali, Indore M.P.","1236547890",3,4));
+        tsal.add(new TopShopes(3,"https://citybazaronline.com/uploads/store-banner/2660_1609167849.jpg","Shaheb Fashion","70/2, B.K. Sindhi Colony CHAT wali Gali, Indore M.P.","1236547890",3,4));
+        tsal.add(new TopShopes(4,"https://citybazaronline.com/uploads/store-banner/2660_1609167849.jpg","Shaheb Fashion","70/2, B.K. Sindhi Colony CHAT wali Gali, Indore M.P.","1236547890",3,4));
+        tsal.add(new TopShopes(5,"https://citybazaronline.com/uploads/store-banner/2660_1609167849.jpg","Shaheb Fashion","70/2, B.K. Sindhi Colony CHAT wali Gali, Indore M.P.","1236547890",3,4));
+
+
+
+        topShopAdapter=new TopShopAdapter(DashboardActivity.this,tsal);
+        binding.rvTopShop.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+
+        binding.rvTopShop.setAdapter(topShopAdapter);
+        SnapHelper snapHelper2 = new PagerSnapHelper();
+        snapHelper2.attachToRecyclerView(binding.rvTopShop);
+
+
+        // vertical and cycle layout
+
+
 
 
 

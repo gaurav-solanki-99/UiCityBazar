@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/swipell"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        >
+        <TextView
+            android:id="@+id/tvSwipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Swipe"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            />
+        <androidx.cardview.widget.CardView
+            android:layout_below="@+id/tvSwipe"
+            android:id="@+id/swipebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+
+            >
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                />
+        </androidx.cardview.widget.CardView>
+
+
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="35dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_toRightOf="@+id/swipell"
+        app:cardBackgroundColor="#E3A7AD"
+        android:rotation="45"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:id="@+id/blackborderll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="15dp"
+                android:background="@drawable/black_square_border"
+
+                >
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#D5EDEAEA"
+                android:layout_marginTop="15dp"
+               android:rotation="-45"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+
+
+
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Under"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="15dp"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="30sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/tvDiscount"
+
+                    />
+
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

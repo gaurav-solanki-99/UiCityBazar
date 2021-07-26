@@ -1,77 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="150dp"
+    android:layout_width="180dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="15dp"
     android:layout_marginLeft="10dp"
+    app:cardElevation="5dp"
+    android:layout_margin="5dp"
     android:layout_marginTop="10dp"
-    android:layout_height="wrap_content">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+    android:layout_height="250dp">
+
+    <RelativeLayout
         android:background="@drawable/black_border"
         android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        >
+
+
         <ImageView
-            android:id="@+id/product_image"
+            android:id="@+id/shopeimage"
             android:layout_width="match_parent"
-            android:layout_height="130dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:src="@drawable/redshoes"
+            android:layout_height="180dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/angika" />
 
-            />
         <TextView
-            android:id="@+id/productName"
-            android:layout_marginTop="5dp"
+            android:id="@+id/tvAddress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ADS Red Shoes"
-            android:textColor="@color/black"
-            android:paddingLeft="15dp"
-            android:textSize="15sp"
-            />
-        <RelativeLayout
+            android:layout_below="@+id/shopeimage"
+            android:layout_marginTop="5dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text=" LG-3, CLASSIC CROWN, OPP. RAFEAL TOWER, 5/2 OLD PALASIA, INDORE M.P." />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/shopeimage"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_baseline_local_phone_24" />
+
+        <TextView
+            android:id="@+id/tvshopName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="10dp"
-            >
-            <ImageView
-                android:id="@+id/rupesicon"
-                android:layout_width="25dp"
-                android:layout_height="20dp"
-                android:src="@drawable/rupeesicon"
-                android:layout_alignParentLeft="true"
-                />
+            android:layout_below="@+id/tvAddress"
+            android:paddingLeft="5dp"
+            android:text="ANGIKA"
+            android:textColor="@color/black" />
+
+        <RatingBar
+            android:id="@+id/MyRating"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvshopName"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:layout_marginTop="2dp"
+            android:stepSize="0.1" />
 
             <TextView
-                android:id="@+id/price"
+                android:id="@+id/tvrates"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="650"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_toRightOf="@+id/rupesicon"
-
+                android:text="1.1"
+                android:layout_toRightOf="@+id/MyRating"
+                android:layout_below="@id/tvshopName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
                 />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="20% OFf"
-                android:textColor="@color/appGreen"
-                android:textStyle="bold"
-                android:layout_toRightOf="@+id/price"
-                android:id="@+id/tvoffper"
-                android:layout_marginLeft="15dp"
-
-                />
-        </RelativeLayout>
-    </LinearLayout>
-
+             <TextView
+                 android:id="@+id/tvdistance"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                  android:text="4.1km"
+                 android:layout_below="@+id/tvshopName"
+                 android:layout_alignParentRight="true"
+                 android:layout_marginRight="10dp"
+                 />
+    </RelativeLayout>
 
 
 </androidx.cardview.widget.CardView>

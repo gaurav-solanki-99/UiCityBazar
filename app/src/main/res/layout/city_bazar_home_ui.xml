@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <LinearLayout
+        android:id="@+id/searchll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+    <EditText
+        android:id="@+id/etsearchitem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:paddingLeft="10dp"
+        android:hint="Search Anything"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/search_background"
+        android:textSize="15sp"
+        android:drawableRight="@drawable/ic_baseline_search_24"
+        android:layout_weight="0.8"
+
+        />
+    <ImageView
+        android:id="@+id/bell"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="0.1"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_baseline_notifications_none_24"
+
+        />
+
+    <ImageView
+        android:id="@+id/trolly"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="0.1"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_baseline_shopping_cart_24"
+
+        />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/rvBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+      android:layout_below="@+id/searchll"
+        />
+
+     <View
+         android:id="@+id/view1"
+         android:layout_below="@id/rvBanner"
+         android:layout_width="match_parent"
+         android:layout_height="5dp"
+         android:background="#E1E1E1"
+         android:layout_marginTop="5dp"
+         />
+      <TextView
+          android:id="@+id/tvProduct"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Top Product"
+          android:layout_below="@+id/view1"
+          android:layout_centerHorizontal="true"
+          android:textSize="20sp"
+          android:textColor="@color/black"
+          android:textStyle="bold"
+          />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvtopStores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvProduct"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/backgroundlines"
+        android:padding="15dp"
+        />
+        <View
+            android:id="@+id/view2"
+            android:layout_below="@id/rvtopStores"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#E1E1E1"
+            android:layout_marginTop="5dp"
+
+            />
+
+        <TextView
+            android:id="@+id/tvDiscount"
+            android:text="Discount"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view2"
+            android:gravity="center_horizontal"
+            />
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvdiscount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="25dp"
+            android:paddingTop="25dp"
+            android:layout_below="@+id/tvDiscount"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/discount"
+            android:padding="15dp"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/marketll"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:paddingBottom="25dp"
+            android:paddingTop="25dp"
+            android:layout_below="@+id/rvdiscount"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/marketll"
+            android:padding="15dp"
+            />
+
+    </RelativeLayout>
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>
