@@ -63,22 +63,24 @@
         android:layout_marginTop="10dp"
       android:layout_below="@+id/searchll"
         />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/topProductll"
+            android:layout_below="@+id/rvBanner"
+            android:background="@drawable/pinkcircles"
+            android:paddingBottom="25dp"
+            >
 
-     <View
-         android:id="@+id/view1"
-         android:layout_below="@id/rvBanner"
-         android:layout_width="match_parent"
-         android:layout_height="5dp"
-         android:background="#E1E1E1"
-         android:layout_marginTop="5dp"
-         />
+
       <TextView
           android:id="@+id/tvProduct"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="Top Product"
-          android:layout_below="@+id/view1"
-          android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+           android:layout_gravity="center_horizontal"
           android:textSize="20sp"
           android:textColor="@color/black"
           android:textStyle="bold"
@@ -90,20 +92,34 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvProduct"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/backgroundlines"
+
         android:padding="15dp"
         />
+        </LinearLayout>
         <View
             android:id="@+id/view2"
-            android:layout_below="@id/rvtopStores"
+            android:layout_below="@id/topProductll"
             android:layout_width="match_parent"
-            android:layout_height="5dp"
+            android:layout_height="2dp"
             android:background="#E1E1E1"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
 
             />
 
-        <TextView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/discountll"
+            android:layout_below="@+id/view2"
+            android:orientation="vertical"
+            android:background="@drawable/red_white_background"
+            android:paddingBottom="25dp"
+            android:layout_marginTop="10dp"
+
+>
+         <TextView
             android:id="@+id/tvDiscount"
             android:text="Discount"
             android:textSize="20sp"
@@ -111,40 +127,165 @@
             android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/view2"
+             android:layout_marginTop="15dp"
+
             android:gravity="center_horizontal"
             />
-
 
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvdiscount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="25dp"
-            android:paddingTop="25dp"
             android:layout_below="@+id/tvDiscount"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/discount"
-            android:padding="15dp"
+            android:layout_marginTop="-1dp"
+
+
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view3"
+            android:layout_below="@id/discountll"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#E1E1E1"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/famousMarketll"
+            android:layout_below="@+id/view3"
+            android:orientation="vertical"
+            android:paddingBottom="25dp"
+            android:background="@drawable/blue_white_gradiet"
+            android:layout_marginTop="10dp"
+            >
+
+        <TextView
+            android:id="@+id/tvFamousMarket"
+            android:text="Famous Market"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
             />
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/marketll"
+            android:id="@+id/rvmarket"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
             android:paddingBottom="25dp"
             android:paddingTop="25dp"
-            android:layout_below="@+id/rvdiscount"
+            android:layout_below="@+id/tvFamousMarket"
+            android:layout_centerHorizontal="true"
+
+            android:padding="15dp"
+            />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view4"
+            android:layout_below="@id/famousMarketll"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#E1E1E1"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+
+            />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/tvShopesFrom"
+            android:text="Shopes From Rajwada"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view4"
+            android:gravity="center_horizontal"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvShopesFrom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="25dp"
+            android:paddingTop="25dp"
+            android:layout_below="@+id/tvShopesFrom"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/marketll"
+            android:padding="15dp"
+            />
+        <View
+            android:id="@+id/view5"
+            android:layout_below="@id/rvShopesFrom"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#E1E1E1"
+            android:layout_marginTop="5dp"
+
+            />
+        <TextView
+            android:id="@+id/tvBloger"
+            android:text="Trending Blogger"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view5"
+            android:gravity="center_horizontal"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBlogger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="25dp"
+            android:paddingTop="25dp"
+            android:layout_below="@+id/tvBloger"
             android:layout_centerHorizontal="true"
             android:background="@drawable/marketll"
             android:padding="15dp"
             />
 
+        <View
+            android:id="@+id/view6"
+            android:layout_below="@id/rvBlogger"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#E1E1E1"
+            android:layout_marginTop="5dp"
+
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/rvBottomBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/view6"
+            />
+
     </RelativeLayout>
     </ScrollView>
-
 
 
 

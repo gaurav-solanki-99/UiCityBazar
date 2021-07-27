@@ -10,7 +10,7 @@
     android:layout_height="250dp">
 
     <RelativeLayout
-        android:background="@drawable/black_border"
+
         android:padding="5dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
