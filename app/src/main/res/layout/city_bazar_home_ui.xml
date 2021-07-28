@@ -63,14 +63,26 @@
         android:layout_marginTop="10dp"
       android:layout_below="@+id/searchll"
         />
+        <View
+            android:id="@+id/view1"
+            android:layout_below="@id/rvBanner"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#E1E1E1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+
+            />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:id="@+id/topProductll"
-            android:layout_below="@+id/rvBanner"
+            android:layout_below="@+id/view1"
             android:background="@drawable/pinkcircles"
             android:paddingBottom="25dp"
+            android:layout_marginTop="10dp"
             >
 
 
@@ -93,7 +105,7 @@
         android:layout_below="@+id/tvProduct"
         android:layout_centerHorizontal="true"
 
-        android:padding="15dp"
+
         />
         </LinearLayout>
         <View
@@ -205,6 +217,17 @@
 
             />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llshopesfrom"
+            android:layout_below="@+id/view4"
+            android:orientation="vertical"
+
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shopes_from_layout"
+            >
+
         <TextView
             android:layout_marginTop="10dp"
             android:id="@+id/tvShopesFrom"
@@ -227,18 +250,33 @@
             android:paddingTop="25dp"
             android:layout_below="@+id/tvShopesFrom"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/marketll"
-            android:padding="15dp"
-            />
-        <View
-            android:id="@+id/view5"
-            android:layout_below="@id/rvShopesFrom"
-            android:layout_width="match_parent"
-            android:layout_height="5dp"
-            android:background="#E1E1E1"
-            android:layout_marginTop="5dp"
+
 
             />
+        </LinearLayout>
+        <View
+            android:id="@+id/view5"
+            android:layout_below="@id/llshopesfrom"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#E1E1E1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llblogger"
+            android:layout_below="@+id/view5"
+            android:orientation="vertical"
+            android:background="@drawable/trendin_blogger_background"
+            android:layout_marginTop="10dp"
+            >
+
+
+
         <TextView
             android:id="@+id/tvBloger"
             android:text="Trending Blogger"
@@ -247,8 +285,9 @@
             android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/view5"
+
             android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
             />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -257,19 +296,22 @@
             android:layout_height="wrap_content"
             android:paddingBottom="25dp"
             android:paddingTop="25dp"
-            android:layout_below="@+id/tvBloger"
+
             android:layout_centerHorizontal="true"
-            android:background="@drawable/marketll"
-            android:padding="15dp"
+
+
             />
+        </LinearLayout>
 
         <View
             android:id="@+id/view6"
-            android:layout_below="@id/rvBlogger"
+            android:layout_below="@id/llblogger"
             android:layout_width="match_parent"
-            android:layout_height="5dp"
+            android:layout_height="2dp"
             android:background="#E1E1E1"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
 
             />
 
