@@ -143,6 +143,7 @@
             android:layout_marginTop="-30dp"
             android:background="@color/white"
             android:gravity="left"
+
             android:paddingLeft="15dp"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
